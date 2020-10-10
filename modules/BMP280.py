@@ -107,4 +107,4 @@ def read():
     return (bmp.pressure, bmp.temperature)
 
 def altitude(seaLevelhPa):
-    return 44330 * (1.0 - pow(bmp.pressure / seaLevelhPa, 0.1903))
+    return round(44330 * (1.0 - pow(bmp.pressure / seaLevelhPa, 0.1903)), 2)
