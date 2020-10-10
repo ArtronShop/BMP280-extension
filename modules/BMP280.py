@@ -22,8 +22,8 @@ class BMP280:
         self._P8 = unp('<h', self._read(0x9C, 2))[0]
         self._P9 = unp('<h', self._read(0x9E, 2))[0]
  
-        self._t_os = BMP280_TEMP_OS_2  # temperature oversampling
-        self._p_os = BMP280_PRES_OS_16  # pressure oversampling
+        self._t_os = 2  # temperature oversampling
+        self._p_os = 5  # pressure oversampling
  
         # output raw
         self._t_raw = 0
