@@ -19,7 +19,13 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "bmp280_read_altitude",
-  "message0": "BMP280 altitude (m)",
+  "message0": "BMP280 altitude (m) (sea level=  %1 hPa)",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "seaLevelhPa"
+    }
+  ],
   "inputsInline": true,
   "output": "Number",
   "colour": "#672e58",
