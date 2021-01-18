@@ -1,6 +1,7 @@
 from machine import Pin, I2C
 from ustruct import unpack as unp
 import utime
+import os
  
 # Author David Wahlund david@dafnet.se
 
