@@ -1,7 +1,17 @@
 Blockly.defineBlocksWithJsonArray([
 {
   "type": "bmp280_read_pressure",
-  "message0": "BMP280 pressure (hPa)",
+  "message0": "BMP280 (Address %1) pressure (hPa)",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [ "0x76", "0x76" ],
+        [ "0x77", "0x77" ]
+      ]
+    }
+  ],
   "inputsInline": true,
   "output": "Number",
   "colour": "#672e58",
@@ -10,7 +20,17 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "bmp280_read_temperature",
-  "message0": "BMP280 temperature (°C)",
+  "message0": "BMP280 (Address %1) temperature (°C)",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [ "0x76", "0x76" ],
+        [ "0x77", "0x77" ]
+      ]
+    }
+  ],
   "inputsInline": true,
   "output": "Number",
   "colour": "#672e58",
@@ -19,8 +39,16 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "bmp280_read_altitude",
-  "message0": "BMP280 altitude (m) (sea level=  %1 hPa)",
+  "message0": "BMP280 (Address %1) altitude (m) (sea level=  %2 hPa)",
   "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [ "0x76", "0x76" ],
+        [ "0x77", "0x77" ]
+      ]
+    },
     {
       "type": "input_value",
       "name": "seaLevelhPa"

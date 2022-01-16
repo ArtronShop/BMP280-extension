@@ -107,10 +107,16 @@ if "KidBright32" in machine:
 else:
     i2c1 = I2C(0, scl=Pin(22), sda=Pin(21), freq=100000)
 
-bmp = BMP280(i2c1)
+bmp = None
 
-def read():
+def read(addr=0x76):
+    global bmp
+    if bmp == None:
+        bmp = BMP280(i2c1, addr)
     return (bmp.pressure, bmp.temperature)
 
-def altitude(seaLevelhPa):
+def altitude(seaLevelhPa, addr=0x76):
+    global bmp
+    if bmp == None:
+        bmp = BMP280(i2c1, addr)
     return round(44330 * (1.0 - pow(bmp.pressure / seaLevelhPa, 0.1903)), 2)
