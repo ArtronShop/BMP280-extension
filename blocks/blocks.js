@@ -5,7 +5,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "field_dropdown",
-      "name": "type",
+      "name": "addr",
       "options": [
         [ "0x76", "0x76" ],
         [ "0x77", "0x77" ]
@@ -24,7 +24,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "field_dropdown",
-      "name": "type",
+      "name": "addr",
       "options": [
         [ "0x76", "0x76" ],
         [ "0x77", "0x77" ]
@@ -43,7 +43,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "field_dropdown",
-      "name": "type",
+      "name": "addr",
       "options": [
         [ "0x76", "0x76" ],
         [ "0x77", "0x77" ]
