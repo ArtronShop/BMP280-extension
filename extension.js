@@ -1,9 +1,9 @@
 ({
     name: "BMP280", // Category Name
     description: "Pressure sensor",
-    author: "IOXhop.com",
+    author: "ArtronShop",
     category: "Sensors",
-    version: "1.0.0",
+    version: "1.1.0",
     icon: "/static/icon.png", // Category icon
     color: "#672e58", // Category color (recommend some blocks color)
     blocks: [ // Blocks in Category
