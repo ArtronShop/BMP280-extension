@@ -102,11 +102,13 @@ class BMP280:
         return round(self._p * 0.01, 2) # P -> hPa
 
 machine = os.uname().machine
-if "KidBright32" in machine:
-    i2c1 = I2C(1, scl=Pin(5), sda=Pin(4), freq=100000)
+if ("KidBright32" in machine) or ("KidMotor V4" in machine):
+    i2c1 = I2C(1, scl=Pin(5), sda=Pin(4), freq=400000)
+elif "Mbits" in machine:
+    i2c1 = I2C(0, scl=Pin(21), sda=Pin(22), freq=400000)
 else:
-    i2c1 = I2C(0, scl=Pin(22), sda=Pin(21), freq=100000)
-
+    i2c1 = I2C(0, scl=Pin(22), sda=Pin(21), freq=400000)
+  
 bmp = None
 
 def read(addr=0x76):
