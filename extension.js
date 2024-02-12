@@ -20,5 +20,11 @@
         },
         "bmp280_read_pressure",
         "bmp280_read_temperature"
+    ], 
+    supportArduinoPlatform: true,
+    depends: [ // Arduino library
+        "Adafruit BMP280 Library@2.6.8",
+        "Adafruit Unified Sensor@1.1.14",
+        "Adafruit BusIO@1.15.0"
     ]
 });
