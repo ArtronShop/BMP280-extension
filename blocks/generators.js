@@ -59,14 +59,14 @@ const getBMP280FunctionName = () => {
 Blockly.JavaScript['bmp280_read_pressure'] = function(block) {
   var dropdown_addr = block.getFieldValue('addr');
 
-  var code = `${getBMP280FunctionName()}${dropdown_addr}, 0)`;
+  var code = `${getBMP280FunctionName()}(${dropdown_addr}, 0)`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['bmp280_read_temperature'] = function(block) {
   var dropdown_addr = block.getFieldValue('addr');
 
-  var code = `${getBMP280FunctionName()}${dropdown_addr}, 1)`;
+  var code = `${getBMP280FunctionName()}(${dropdown_addr}, 1)`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
@@ -74,7 +74,7 @@ Blockly.JavaScript['bmp280_read_altitude'] = function(block) {
   var dropdown_addr = block.getFieldValue('addr');
   var value_seaLevelhPa = Blockly.JavaScript.valueToCode(block, 'seaLevelhPa', Blockly.JavaScript.ORDER_ATOMIC);
 
-  var code = `${getBMP280FunctionName()}${dropdown_addr}, 1, ${value_seaLevelhPa})`;
+  var code = `${getBMP280FunctionName()}(${dropdown_addr}, 2, ${value_seaLevelhPa})`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
